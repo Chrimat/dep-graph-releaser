@@ -255,7 +255,7 @@ class Menu(private val eventManager: EventManager) {
                     |Please report a bug at $GITHUB_NEW_ISSUE in case a job failed due to an error in dep-graph-releaser.
                     """.trimMargin()
                 )
-                buttonText.innerText = "Re-trigger failed Jobs"
+                buttonText.innerText = "Resume '$processName'"
                 button.title = "Continue with the process '$processName' by re-processing previously failed projects."
             }
         }
