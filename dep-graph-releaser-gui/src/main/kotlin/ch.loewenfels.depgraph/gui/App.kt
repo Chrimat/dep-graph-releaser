@@ -54,7 +54,7 @@ class App {
         val tmpUrl = if (possiblyRelativePublishJobUrl.contains("://")) {
             possiblyRelativePublishJobUrl
         } else {
-            require(window.location.protocol == "https:") {
+            require(window.location.protocol == "https:" || window.location.hostname == "localhost") {
                 "The host needs to use the https protocol if publishJob is defined as relative path."
             }
             prefix + possiblyRelativePublishJobUrl
