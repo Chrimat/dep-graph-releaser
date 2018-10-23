@@ -50,7 +50,8 @@ class App {
             "The publish job URL does not start with https but contains ://"
         }
 
-        val prefix = window.location.protocol + "//" + window.location.hostname + "/"
+        val port = if (window.location.port.isNotBlank()) ":" + window.location.port else ""
+        val prefix = window.location.protocol + "//" + window.location.hostname + port + "/"
         val tmpUrl = if (possiblyRelativePublishJobUrl.contains("://")) {
             possiblyRelativePublishJobUrl
         } else {
