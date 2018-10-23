@@ -1,8 +1,8 @@
 [![Download](https://api.bintray.com/packages/loewenfels/oss/dep-graph-releaser/images/download.svg) ](https://bintray.com/loewenfels/oss/dep-graph-releaser/_latestVersion)
 [![EUPL](https://img.shields.io/badge/license-EUPL%201.2-brightgreen.svg)](https://joinup.ec.europa.eu/collection/eupl/eupl-text-11-12)
-[![Build Status Travis](https://travis-ci.org/loewenfels/dep-graph-releaser.svg?branch=master)](https://travis-ci.org/loewenfels/dep-graph-releaser/branches)
+[![Build Status Travis](https://travis-ci.org/loewenfels/dep-graph-releaser.svg?tag=v1.2.0)](https://travis-ci.org/loewenfels/dep-graph-releaser/branches)
 [![Build status AppVeyor](https://ci.appveyor.com/api/projects/status/2cw4dnwkmlpb7fnn/branch/master?svg=true)](https://ci.appveyor.com/project/loewenfels/dep-graph-releaser/branch/master)
-[![Coverage](https://codecov.io/github/loewenfels/dep-graph-releaser/coverage.svg?branch=master)](https://codecov.io/github/loewenfels/dep-graph-releaser?branch=master)
+[![Coverage](https://codecov.io/github/loewenfels/dep-graph-releaser/coverage.svg?tag=v1.2.0)](https://codecov.io/github/loewenfels/dep-graph-releaser?tag=v1.2.0)
 [![SonarCloud Status](https://sonarcloud.io/api/project_badges/measure?project=depgraph&metric=alert_status)](https://sonarcloud.io/dashboard?id=depgraph)
 
 

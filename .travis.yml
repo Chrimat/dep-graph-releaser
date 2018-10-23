@@ -29,7 +29,7 @@ script:
     if [ "$TRAVIS_TEST_RESULT" == 0 ] && [ "$TRAVIS_JDK_VERSION" == oraclejdk8 ]; then
         sonar-scanner \
             -Dsonar.projectKey=depgraph \
-            -Dsonar.projectVersion=1.2.0-SNAPSHOT \
+            -Dsonar.projectVersion=1.2.0 \
             -Dsonar.java.coveragePlugin=jacoco \
             -Dsonar.kotlin.detekt.reportPaths=build/detekt/detekt-checkstyle.xml \
             -Dsonar.sources="\
