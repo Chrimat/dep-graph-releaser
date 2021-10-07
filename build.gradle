@@ -1,4 +1,4 @@
-version = "1.2.0"
+version = "1.2.1-SNAPSHOT"
 group = 'ch.loewenfels.depgraph'
 
 buildscript {
@@ -20,7 +20,7 @@ buildscript {
 
         //gh-pages.gradle
         ghPages_version = version
-        dokka_sourceMapping = 'tree/v1.2.0'
+        dokka_sourceMapping = 'tree/v1.2.1-SNAPSHOT'
         docProjects = subprojects
         srcKotlin = 'src/main/kotlin'
         github_url = "https://github.com/loewenfels/${rootProject.name}"
@@ -90,6 +90,7 @@ subprojects {
         jcenter()
         maven { url "https://dl.bintray.com/robstoll/copies" }
         maven { url "https://dl.bintray.com/robstoll/tutteli-jars" }
+        maven { url "https://mavenrepo.loewenfels.ch/content/groups/public/" }
     }
 }
 
