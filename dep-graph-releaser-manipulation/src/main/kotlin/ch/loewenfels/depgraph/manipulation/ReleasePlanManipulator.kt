@@ -57,14 +57,20 @@ class ReleasePlanManipulator(private val releasePlan: ReleasePlan) {
 
     private fun collectDependentProjects(targetProjectId: ProjectId): Map<ProjectId, Set<ProjectId>> {
         val projectIds = hashMapOf<ProjectId, MutableSet<ProjectId>>()
+        val projectsAlreadyVisited = HashSet<ProjectId>()
         val projectsToVisit = hashSetOf(targetProjectId)
         do {
             val projectId = projectsToVisit.iterator().next()
+            if(!projectsAlreadyVisited.contains(projectId)){
+                projectsAlreadyVisited.add(projectId)
+            }
             projectsToVisit.remove(projectId)
             releasePlan.getDependents(projectId).forEach { dependentId ->
                 val set = projectIds.computeIfAbsent(dependentId) { hashSetOf() }
                 set.add(projectId)
-                projectsToVisit.add(dependentId)
+                if(!projectsAlreadyVisited.contains(dependentId)){
+                    projectsToVisit.add(dependentId)
+                }
             }
         } while (projectsToVisit.isNotEmpty())
         return projectIds
